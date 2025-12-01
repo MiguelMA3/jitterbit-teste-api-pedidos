@@ -45,14 +45,14 @@ A função de mapeamento (`mapIncomingOrder` em `orderController.js`) realiza as
 
 1.  Clone este repositório:
     ```bash
-    git clone [link do seu repositório]
+    git clone https://github.com/MiguelMA3/jitterbit-teste-api-pedidos
     cd jitterbit-teste-api-pedidos
     ```
 2.  Instale as dependências:
     ```bash
     npm install
     ```
-3.  Crie um arquivo de variáveis de ambiente `.env` na raiz do projeto e configure as chaves de conexão com o MongoDB e a porta do servidor:
+3.  Verifique o arquivo de variáveis de ambiente `.env` na raiz do projeto e configure as chaves de conexão com o MongoDB e a porta do servidor:
     ```ini
     PORT=3000
     MONGODB_URI="<sua_string_de_conexão_mongodb>"
@@ -117,6 +117,6 @@ Após iniciar o servidor, a documentação estará acessível em:
 
 A API possui tratamento de erros robusto, incluindo:
 - **Validação de Schema/Tipos:** Garantida pelo Mongoose.
-- **ID Duplicado (POST):** Retorna 400 Bad Request com mensagem clara se o orderId já existir.
-- **Recurso Não Encontrado (GET, PUT, DELETE):** Retorna 404 Not Found.
-- **Erros Internos:** Retorna 500 Internal Server Error para erros não previstos (como falha de conexão com o banco de dados).
+- **ID Duplicado (POST):** Retorna `400 Bad Request` com mensagem clara se o orderId já existir.
+- **Recurso Não Encontrado (GET, PUT, DELETE):** Retorna `404 Not Found`.
+- **Erros Internos:** Retorna `500 Internal Server` Error para erros não previstos (como falha de conexão com o banco de dados).
