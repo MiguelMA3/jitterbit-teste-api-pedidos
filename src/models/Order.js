@@ -1,3 +1,46 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Item:
+ *       type: object
+ *       properties:
+ *         productId:
+ *           type: number
+ *           description: ID do produto após mapeamento.
+ *         quantity:
+ *           type: number
+ *           description: Quantidade do item.
+ *         price:
+ *           type: number
+ *           description: Preço do item.
+ *     Order:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: ID gerado pelo MongoDB.
+ *         orderId:
+ *           type: string
+ *           description: O ID de pedido do sistema de origem.
+ *         value:
+ *           type: number
+ *           format: float
+ *         creationDate:
+ *           type: string
+ *           format: date-time
+ *         items:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Item'
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *         updatedAt:
+ *           type: string
+ *           format: date-time
+ */
+
 const mongoose = require('mongoose');
 
 // Sub-Schema para os itens do pedido
